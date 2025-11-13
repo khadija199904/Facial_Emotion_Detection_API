@@ -1,17 +1,13 @@
 #  Facial-Emotion-Detection-API
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-Framework-green?logo=fastapi)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange?logo=tensorflow)
-![OpenCV](https://img.shields.io/badge/OpenCV-ComputerVision-red?logo=opencv)
-![SQLite](https://img.shields.io/badge/SQLite-Database-blue?logo=sqlite)
-![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED?logo=docker)
-![Simplon Maghreb](https://img.shields.io/badge/Simplon-Maghreb-critical?logo=hackthebox)
-
-
-
-<img src="https://simplon.co/storage/2315/Simplon_Maghreb_logo.png" alt="Simplon Maghreb Logo" width="200"/>
-
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" alt="Python Badge"/>
+  <img src="https://img.shields.io/badge/FastAPI-Framework-green?logo=fastapi" alt="FastAPI Badge"/>
+  <img src="https://img.shields.io/badge/OpenCV-HaarCascade-red?logo=opencv" alt="OpenCV Badge"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-Database-336791?logo=postgresql" alt="PostgreSQL Badge"/>
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter" alt="Jupyter Badge"/>
+  <img src="https://img.shields.io/badge/TensorFlow-Optional-orange?logo=tensorflow" alt="TensorFlow Badge"/>
+</p>
 
 ##  Description du projet
 
