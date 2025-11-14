@@ -8,6 +8,7 @@ from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "../Model_CNN_saved/model1.keras")
+
 # Charger le modèle et le classifieur
 model = load_model(MODEL_PATH)
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
