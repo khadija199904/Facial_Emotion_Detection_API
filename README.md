@@ -31,7 +31,11 @@ Facial_Emotion_Detection_API/
 ├─ tests/
 │  ├─ __init__.py
 │  ├─ test_api.py
-│  └─ test_load_model.py      
+│  └─ test_load_model.py 
+├─ Model_CNN_saved/
+│   └─ model1.keras
+├─ requirements.txt
+└─ README.md     
 ├─ Preprocessing_and_Entrainement/
 │  
 ├─ requirements.txt
@@ -131,6 +135,6 @@ pip install -r requirements.txt
 4. Tester l’API
 - Accéder à Swagger UI : http://127.0.0.1:8000/docs
 
-x
+
 
 
