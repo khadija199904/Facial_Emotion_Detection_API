@@ -4,10 +4,10 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "api_app"))
 from main import app
 
-client = TestClient(app)
 
-def test_format_prediction(client):
 
+def test_format_prediction():
+    client = TestClient(app)
     request = client.get("/HistoryPrediction")
     # Vérifier que le endpoint répond bien
     assert request.status_code == 200  
