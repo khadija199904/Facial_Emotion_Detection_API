@@ -76,7 +76,7 @@ Facial_Emotion_Detection_API/
 ```json
 {
       "emotion": "Sad",
-      "confidence": 0.35901835560798645
+      "confidence": 35.9 
 }
 ```
 
@@ -90,25 +90,25 @@ Facial_Emotion_Detection_API/
  {
     "id": 85,
     "emotion": "Sad",
-    "confidence": 0.35901835560798645,
+    "confidence": 35.9,
     "created_at": "2025-11-14T16:12:10.458848"
   },
   {
     "id": 84,
     "emotion": "Surprise",
-    "confidence": 0.28211894631385803,
+    "confidence": 28.21,
     "created_at": "2025-11-14T16:11:55.683715"
   },
   {
     "id": 83,
     "emotion": "Happy",
-    "confidence": 0.6230819821357727,
+    "confidence": 62.30,
     "created_at": "2025-11-14T16:11:55.636840"
   },
   {
     "id": 82,
     "emotion": "Happy",
-    "confidence": 0.8596352338790894,
+    "confidence": 85.96,
     "created_at": "2025-11-14T14:02:44.887818"
   }
 }
