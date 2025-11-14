@@ -1,13 +1,10 @@
 from fastapi import FastAPI, UploadFile, Depends,File
 from database import Base ,engine ,SessionLocal
 from sqlalchemy.orm import Session
-from schema import PredictionResult,PredictionResponse, HistoryPrediction 
+from schema import PredictionResponse, HistoryPrediction 
 from detect_and_predict import detect_and_predict_emotion
 from models import Prediction
-# from PIL import Image
-# import io
 import numpy as np
-# import cv2
 from typing import List
 
 
@@ -34,16 +31,16 @@ async def predict_emotion(file: UploadFile = File(...) , db : Session = Depends(
    results = detect_and_predict_emotion(file)
 
    response = []
-   for emotion, score in results:  #
+   for emotion, score in results:  
         # Enregistrer dans DB
-        score = float(score)
-        pred = Prediction(emotion=emotion, confidence=score)
+        confidence= float(score)
+        pred = Prediction(emotion=emotion, confidence=confidence)
         db.add(pred)
         db.commit()
         db.refresh(pred)
         response.append({
             "emotion": emotion,
-            "confidence": score,
+            "confidence": f"{confidence:.2f}", # affichage en pourcentage
             "id": pred.id
         })
    

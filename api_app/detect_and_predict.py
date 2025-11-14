@@ -49,16 +49,15 @@ def detect_and_predict_emotion(img_path):
         preds = model.predict(face_reshaped)
        # Sélectionne l'émotion correspondant à la probabilité la plus élevée prédite par le modèle
         emotion = emotions[np.argmax(preds)]
-       # Calcule probebilité de l'emotion 
-        score = np.max(preds)  
-        confidence = round(float(score) * 100, 1)
-
+       # Calcule probebilité de l'emotion   
+        confidence = np.max(preds)
+        confidence= float(confidence) * 100.0  
          # Dessiner rectangle vert et texte d’émotion
         cv2.rectangle(img_cv, (x, y), (x+w, y+h), (0, 255, 0), 3)
         text = f"{emotion} {confidence}%"
         cv2.putText(img_cv, text, (x, y-10),cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
 
-        results.append((emotion, score))
+        results.append((emotion, confidence))
         
         
 
