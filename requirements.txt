@@ -1,0 +1,13 @@
+sqlalchemey 
+dotenv
+psycopg2-binary
+pydantic
+fastapi
+uvicorn
+pillow
+numpy
+keras
+tensorflow
+opencv-python
+pytest
+httpx

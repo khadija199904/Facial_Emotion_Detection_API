@@ -23,7 +23,10 @@ class HistoryPrediction(BaseModel):
     created_at: datetime
 
     class Config:
-        from_attributes = True
+        orm_mode = True
 
-    
+# Schema pour renvoyer plusieurs prédictions dans une réponse
+class PredictionResponse(BaseModel):
+    predictions_img: List[PredictionResult]
+    message: str
 
