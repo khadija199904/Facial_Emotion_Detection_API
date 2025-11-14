@@ -27,7 +27,8 @@ Facial_Emotion_Detection_API/
 │  ├─ main.py
 │  ├─ database.py
 │  ├─ models.py
-│  └─ schema.py
+│  ├─ schema.py
+│  └─ detect_and_predict.py.py # script Python pour détecter les visages et prédire les émotions
 ├─ tests/
 │  ├─ __init__.py
 │  ├─ test_api.py
@@ -58,7 +59,10 @@ Facial_Emotion_Detection_API/
 ## Partie Backend (API)
 
 - **Technologie :** FastAPI  
-- **Interface :** Accessible via Swagger UI o
+- **Interface :** Accessible via Swagger UI 
+
+![alt text](Interface.png)
+
 - **Endpoints :**
 
 ### POST `/predict_emotion`  
@@ -66,6 +70,9 @@ Facial_Emotion_Detection_API/
 - **Description :** Prédit l’émotion à partir d’une image chargée.  
 - **Paramètres :**  
   - `file` : Image (.jpg, .png, ...) à uploader.  
+
+![alt text](Post.png)
+
 
 - **Réponse :**  
 ```json
@@ -77,15 +84,14 @@ Facial_Emotion_Detection_API/
 
 ### GET `/history` 
 - **Description :** Retourne l’historique des prédictions effectuées.  
+
+![alt text](Get.png)
+
 - **Réponse :**  
-```json
-{
-      "emotion": "Sad",
-      "confidence": 0.35901835560798645
-}
 
 ```json
-{ {
+{ 
+ {
     "id": 85,
     "emotion": "Sad",
     "confidence": 0.35901835560798645,
