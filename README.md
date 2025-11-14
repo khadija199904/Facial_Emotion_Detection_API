@@ -20,6 +20,8 @@ Ce projet consiste à développer une **API d’intelligence artificielle** capa
 - **Prédire l’émotion** .  
 - **Enregistrer la prédiction** et les métadonnées associées dans une base de données.  
 
+### Structure du projet 
+
 ```bash
 Facial_Emotion_Detection_API/
 ├─ api_app/
