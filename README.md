@@ -61,8 +61,6 @@ Facial_Emotion_Detection_API/
 - **Technologie :** FastAPI  
 - **Interface :** Accessible via Swagger UI 
 
-![alt text](Interface.png)
-
 - **Endpoints :**
 
 ### POST `/predict_emotion`  
@@ -70,8 +68,6 @@ Facial_Emotion_Detection_API/
 - **Description :** Prédit l’émotion à partir d’une image chargée.  
 - **Paramètres :**  
   - `file` : Image (.jpg, .png, ...) à uploader.  
-
-![alt text](Post.png)
 
 
 - **Réponse :**  
@@ -84,8 +80,6 @@ Facial_Emotion_Detection_API/
 
 ### GET `/history` 
 - **Description :** Retourne l’historique des prédictions effectuées.  
-
-![alt text](Get.png)
 
 - **Réponse :**  
 
