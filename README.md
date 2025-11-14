@@ -33,10 +33,8 @@ Facial_Emotion_Detection_API/
 │  ├─ test_api.py
 │  └─ test_load_model.py 
 ├─ Model_CNN_saved/
-│   └─ model1.keras
-├─ requirements.txt
-└─ README.md     
-├─ Preprocessing_and_Entrainement/
+│   └─ model1.keras    
+├─ Preprocessing_and_Entrainement.ipynb
 │  
 ├─ requirements.txt
 └─ README.md
