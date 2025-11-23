@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from datetime import datetime
 from typing import List
 
@@ -7,13 +7,7 @@ class PredictionResult(BaseModel):
     emotion: str
     confidence: float
 
-# Schema pour une prédiction stockée dans database 
-class Prediction(PredictionResult):
-    id: int
-    created_at: datetime
 
-    class Config:
-        orm_mode = True
 
  # Schema affichage historique des prédictions  
 class HistoryPrediction(BaseModel):
@@ -22,9 +16,8 @@ class HistoryPrediction(BaseModel):
     confidence: float
     created_at: datetime
 
-    class Config:
-        orm_mode = True
-
+    model_config = ConfigDict(from_attributes=True)
+    
 # Schema pour renvoyer plusieurs prédictions dans une réponse
 class PredictionResponse(BaseModel):
     predictions_img: List[PredictionResult]

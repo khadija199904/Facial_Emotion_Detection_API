@@ -8,7 +8,7 @@ from main import app
 
 def test_format_prediction():
     client = TestClient(app)
-    request = client.get("/HistoryPrediction")
+    request = client.get("/history")
     # Vérifier que le endpoint répond bien
     assert request.status_code == 200  
     

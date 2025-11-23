@@ -6,17 +6,19 @@ from PIL import Image
 import io
 from datetime import datetime
 
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "../Model_CNN_saved/model1.keras")
 
 # Charger le modèle et le classifieur
 model = load_model(MODEL_PATH)
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-emotions = ["Angry", "Disgust", "Fear", "Happy", "Sad", "Surprise", "Neutral"]
+emotions  = ['angry', 'disgusted', 'fearful', 'happy', 'neutral', 'sad', 'surprised']
 
 
 
 def detect_and_predict_emotion(img_path):
+
     
     # Convertir bytes → image PIL
     image = Image.open(io.BytesIO(img_path)).convert("RGB")
@@ -26,6 +28,7 @@ def detect_and_predict_emotion(img_path):
 
     #lire l'image avec Opencv
     img_cv = cv2.cvtColor(img_array, cv2.COLOR_BGR2RGB)
+
 
     # Convertir en gris pour Haar Cascade
     img_gray = cv2.cvtColor(img_cv, cv2.COLOR_BGR2GRAY)
@@ -43,10 +46,9 @@ def detect_and_predict_emotion(img_path):
 
         # resize
         face_resized = cv2.resize(face, (48, 48))
-         # Pour modèle RGB :
-        face_reshaped = face_resized.reshape(1, 48, 48, 3)
+        face_resized = face_resized.reshape(1,48,48,3)
         # Prediction
-        preds = model.predict(face_reshaped)
+        preds = model.predict(face_resized)
        # Sélectionne l'émotion correspondant à la probabilité la plus élevée prédite par le modèle
         emotion = emotions[np.argmax(preds)]
        # Calcule probebilité de l'emotion   
